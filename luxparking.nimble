@@ -5,7 +5,7 @@ author        = "bradacina"
 description   = "Query Luxembourg parking every 15 minutes"
 license       = "MIT"
 srcDir        = "src"
-bin           = @["yyy"]
+bin           = @["luxparking"]
 
 
 
