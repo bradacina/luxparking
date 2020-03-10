@@ -30,12 +30,9 @@ proc ctrlc() {.noconv.} =
   quit()
 
 when isMainModule:
-  addTimer(1000*60*15, false, getData)
+  addTimer(1000*10, false, getData)
   setControlCHook(ctrlc)
-  var nilFd: AsyncFD
-  discard getData(nilFd)
-  while true:
-    sleep(60 * 1000)
-
+  discard getData((AsyncFD)0)
+  runForever()
 
 
